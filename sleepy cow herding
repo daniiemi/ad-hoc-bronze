@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	vector<int> cows(3);
+	cin >> cows[0] >> cows[1] >> cows[2];
+	sort(cows.begin(),cows.end());
+
+	int mn, mx;
+	if(cows[2]-cows[1]==2 or cows[1]-cows[0]==2) mn=1;
+	else mn=2;
+	mx = max((cows[2]-cows[1]),(cows[1]-cows[0]))-1;
+
+	cout << mn << "\n" << mx;
+
+	return 0;
+}
